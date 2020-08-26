@@ -146,7 +146,7 @@ master:
   targetPort: 8080
   # For minikube, set this to NodePort, elsewhere use LoadBalancer
   # Use ClusterIP if your setup includes ingress controller
-  serviceType: ClusterIP
+  serviceType: NodePort
   # Jenkins master service annotations
   serviceAnnotations: {}
   # Jenkins master custom labels
@@ -592,7 +592,7 @@ additionalAgents: {}
 #    TTYEnabled: true
 
 persistence:
-  enabled: true
+  enabled: false
   ## A manually managed Persistent Volume and Claim
   ## Requires persistence.enabled: true
   ## If defined, PVC must be created manually before volume will be bound
